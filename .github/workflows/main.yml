@@ -55,3 +55,4 @@ jobs:
 
             echo "Starting new container..."
             docker run -d -p 3000:3000 --name my-journal ${{ secrets.DOCKER_USERNAME }}/my-journal:latest
+
