@@ -1,4 +1,4 @@
-# 🌸 My Journal App
+# 🌸 My Journal App 🌸
 
 A cute journaling app built with **React + Tailwind CSS**.  
 You can add titles and write down your thoughts, ideas, dreams, or even delusions 😊  
