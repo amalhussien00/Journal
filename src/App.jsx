@@ -34,7 +34,7 @@ export default function App() {
             <div className="w-full max-w-lg flex flex-col gap-4">
                 <input
                     type="text"
-                    placeholder="Title"
+                    placeholder="Title me!"
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
                 />
@@ -43,7 +43,7 @@ export default function App() {
                     placeholder="Fill me with thoughts, ideas, dreams or even delusions :)"
                     value={content}
                     onChange={(e) => setContent(e.target.value)}
-                    rows="6"
+                    rows="10"
                 />
 
                 <div className="flex justify-end">
