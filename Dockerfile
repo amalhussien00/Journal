@@ -1,26 +1,23 @@
 # -------- Build Stage --------
-FROM node:18-alpine as build
+FROM node:18-alpine AS build
 
-# Set working directory
 WORKDIR /app
 
-# Copy package files
-COPY package*.json ./
-
 # Install dependencies
+COPY package*.json ./
 RUN npm install
 
-# Copy app source
+# Copy all source files
 COPY . .
 
-# Build React app for production
+# Build the app
 RUN npm run build
 
 # -------- Production Stage --------
 FROM nginx:alpine
 
-# Copy built React app to Nginx default folder
-COPY --from=build /app/build /usr/share/nginx/html
+# Copy Vite build output
+COPY --from=build /app/dist /usr/share/nginx/html
 
 # Expose default HTTP port
 EXPOSE 80
