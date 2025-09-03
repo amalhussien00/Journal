@@ -15,11 +15,7 @@ You can add titles and write down your thoughts, ideas, dreams, or even delusion
    cd my-journal
 Install dependencies:
 
-bash
-نسخ الكود
 npm install
 Run locally:
 
-bash
-نسخ الكود
 npm run dev
